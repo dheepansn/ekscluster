@@ -30,13 +30,13 @@
     RUN pip3 install pandas
     ENTRYPOINT [ "python3", "urlmonitoring.py" ]
     ```
-4) Navigate to 1.sph-eks-cluster and execute the below commands.
+4) Navigate to 1.url-eks-cluster and execute the below commands.
     ```
     Terraform init
     Terraform plan  (Make sure, it create all the resources for EKS Cluster.)
     Terraform apply -auto-approve 
     ```
-5) Navigate to 2.sph-deploy-nginx and execute the below commands.
+5) Navigate to 2.url-deploy-nginx and execute the below commands.
     ```
     Terraform init
     Terraform plan  (Make sure, it create all the nginx deployment and service for EKS Cluster.)
