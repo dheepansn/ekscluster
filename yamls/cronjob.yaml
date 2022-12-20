@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sphurlmonitoring
+spec:
+  schedule: "*/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: sphurlmonitor
+            image: 0003/dheepansn:sph
+            imagePullPolicy: Always
+            volumeMounts:
+            - name: monitoring-url
+              mountPath: /SPH
+          restartPolicy: OnFailure
+          volumes:
+          - name: monitoring-url
+            persistentVolumeClaim:
+              claimName: sph-pv-claim
