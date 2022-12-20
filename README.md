@@ -17,7 +17,7 @@
 > Note: Not consider the above setup via pipeline as it consumes more time and resource
 
 ### Steps to implement the solutions:
-1) Untar the given tar file. `tar -xzvf ekscluster.tar.gz`
+1) Solution is uploaded into my github. Please do git clone of `git clone https://github.com/dheepansn/ekscluster.git`
 2) Navigate to ekscluster folder and `cd 0.PythonDockerFile`
 3) Execute `bash -x initalsetup.sh <Repo_name> <Tag_name>` It will create ecr repo and create a new Docker Image and push it to newly created repo.
     ```
